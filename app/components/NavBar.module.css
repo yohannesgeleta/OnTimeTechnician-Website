@@ -1,0 +1,31 @@
+.servicesMenu {
+  position: relative;
+}
+
+.servicesDropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  min-width: 10rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.servicesMenu:hover .servicesDropdown {
+  display: flex;
+}
+
+.servicesDropdownLink {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.servicesDropdownLink:hover {
+  background: #f3f4f6;
+}
+

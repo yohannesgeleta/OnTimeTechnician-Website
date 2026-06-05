@@ -1,0 +1,23 @@
+.headerWrapper {
+  width: 100%;
+  background-color: #b6b5b5ed;
+  padding: 20px 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between; /* Crucial: Creates the Left, Center, Right spacing */
+  align-items: center;            /* Perfectly aligns items vertically */
+  max-width: 1200px;              /* Stops the content from spreading too wide on big screens */
+  margin: 0 auto;                 /* Centers the entire 1200px box on the page */
+  padding: 0 20px;                /* Prevents items from hitting the screen edge on mobile */
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;         /* Stacks "Here to Help" on top of the phone number */
+  align-items: center;
+  font-size: x-large;
+  font-weight: 900;
+}
+
