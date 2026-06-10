@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logopic from './images/ott-logo.png'
 import styles from './NavBar.module.css'
+import { ChevronDown } from 'lucide-react';
 
 const NavBar = () => {
   return (
@@ -13,38 +14,42 @@ const NavBar = () => {
         </li>
 
         <li className={styles.servicesMenu}>
-          <Link href="/heating" className="block text-gray-300">
-            Heating
+          
+          <Link href="/heating" className="flex items-center gap-1 text-gray-300 group">
+            <span>Heating</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
-
+          
           <div className={styles.servicesDropdown}>
             <Link href="/heating/install" className={styles.servicesDropdownLink}>
-              Install
+              Heating Install
             </Link>
             <Link href="/heating/repair" className={styles.servicesDropdownLink}>
-              Repair
+              Heating Repair
             </Link>
           </div>
         </li>
 
         <li className={styles.servicesMenu}>
-          <Link href="/cooling" className="block text-gray-300">
-            Cooling
+          <Link href="/cooling" className="flex items-center gap-1 text-gray-300 group">
+            <span>Cooling</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
             <Link href="/cooling/install" className={styles.servicesDropdownLink}>
-              Install
+              Cooling Install
             </Link>
             <Link href="/cooling/repair" className={styles.servicesDropdownLink}>
-              Repair
+              Cooling Repair
             </Link>
           </div>
         </li>
 
         <li className={styles.servicesMenu}>
-          <Link href="/iaq" className="block text-gray-300">
-            Indoor Air Quality
+          <Link href="/iaq" className="flex items-center gap-1 text-gray-300 group">
+            <span>Indoor Air Quality</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
@@ -58,8 +63,9 @@ const NavBar = () => {
         </li>
 
         <li className={styles.servicesMenu}>
-          <Link href="/electrical" className="block text-gray-300">
-            Electrical
+          <Link href="/electrical" className="flex items-center gap-1 text-gray-300 group">
+            <span>Electrical</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
@@ -73,14 +79,9 @@ const NavBar = () => {
         </li>
 
         <li className={styles.servicesMenu}>
-          <Link href="/remodeling" className="block text-gray-300">
-            Remodeling
-          </Link>
-        </li>
-
-        <li className={styles.servicesMenu}>
-          <Link href="/contact/message" className="block text-gray-300">
-            Contact
+          <Link href="/contact/message" className="flex items-center gap-1 text-gray-300 group">
+            <span>Contact</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>

@@ -5,15 +5,15 @@ import hvac from './images/hvac.png'
 export default function Home() {
   return (
     <main> 
-      <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="grid grid-cols-2 gap-1 items-center">
   
         {/* Left Column: Image */}
-        <div>
+        <div className="bg-blue-500">
           <Image 
             src={hvac} 
             alt='hvac stock picture'
-            width={600}
-            height={300}
+            width={900}
+            height={450}
             style={{ objectFit: 'cover' }}
           />
         </div>

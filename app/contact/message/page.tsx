@@ -1,8 +1,12 @@
 import React from 'react'
+import ContactForm from '../message/contactform'
 
-const message = () => {
+const message = () => { 
+
   return (
-    <div>message</div>
+    <div className='flex bg-green-300'>
+      <ContactForm/>
+    </div>
   )
 }
 
