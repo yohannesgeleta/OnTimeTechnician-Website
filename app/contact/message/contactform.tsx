@@ -23,11 +23,11 @@ export default function ContactForm() {
         <form className='m-4'>
           <div className='mt-3 mb-3'>
             <label>Name</label>
-            <input name = "name" placeholder='John Smith' className='border-1 ml-2'/>
+            <input name = "name" placeholder=' John Smith' className='border-1 ml-2'/>
           </div>
           <div>
             <label>Email</label>
-            <input name = "email" type = 'email' placeholder='johnsmith@gmail.com' className='border-1 ml-2'/>
+            <input name = "email" type = 'email' placeholder=' johnsmith@gmail.com' className='border-1 ml-2'/>
           </div>
           <div className='mb-3 mt-3'>
             <label>Message</label>

@@ -47,6 +47,22 @@ const NavBar = () => {
         </li>
 
         <li className={styles.servicesMenu}>
+          <Link href="/electrical" className="flex items-center gap-1 text-gray-300 group">
+            <span>Electrical</span>
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+          </Link>
+
+          <div className={styles.servicesDropdown}>
+            <Link href="/electrical/wiring" className={styles.servicesDropdownLink}>
+              Wiring
+            </Link>
+            <Link href="/electrical/repair" className={styles.servicesDropdownLink}>
+              Repair
+            </Link>
+          </div>
+        </li>
+
+        <li className={styles.servicesMenu}>
           <Link href="/iaq" className="flex items-center gap-1 text-gray-300 group">
             <span>Indoor Air Quality</span>
             <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
@@ -62,21 +78,7 @@ const NavBar = () => {
           </div>
         </li>
 
-        <li className={styles.servicesMenu}>
-          <Link href="/electrical" className="flex items-center gap-1 text-gray-300 group">
-            <span>Electrical</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-
-          <div className={styles.servicesDropdown}>
-            <Link href="/electrical/wiring" className={styles.servicesDropdownLink}>
-              Wiring
-            </Link>
-            <Link href="/electrical/repair" className={styles.servicesDropdownLink}>
-              Repair
-            </Link>
-          </div>
-        </li>
+        
 
         <li className={styles.servicesMenu}>
           <Link href="/contact/message" className="flex items-center gap-1 text-gray-300 group">
