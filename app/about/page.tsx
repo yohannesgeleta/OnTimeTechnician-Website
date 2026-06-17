@@ -7,8 +7,8 @@ import { AirVent, Wind, Fan, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   return (
-    <div>
-      <div className='w-full h-24 bg-blue-300'>
+    <div className='bg-[hsla(0,1%,71%,0.929)]'>
+      <div className='w-full h-24'>
         <div className='text-5xl ml-12 pt-6'>
           <Link className='text-white-300 hover:text-blue-700 hover:underline' href={'/'}>OnTimeTechnician</Link><span> | About</span>
         </div>
@@ -51,7 +51,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-dotted border-gray-300 my-8 w-full" />
+      <div className="border-t border-dotted border-black my-8 w-full" />
 
       {/*Our services section */}
       <div className=''>
@@ -59,11 +59,10 @@ const About = () => {
           Our Services
         </div>
         <div className="mt-2 mr-2 ml-2 grid grid-cols-2 gap-2">
-          <div className="flex flex-col items-center text-center bg-orange-500 p-6 rounded-lg">
+          <Link href="/heating">
+          <div className="flex flex-col items-center text-center bg-orange-500 p-6 rounded-lg hover:border-0 hover:bg-orange-300">
             <div className="flex items-center justify-center w-20 h-20 bg-orange-100 text-orange-600 rounded-full">
-              <Link href="/heating">
-                <Flame className='w-12 h-12 text-orange-500'/>
-              </Link>
+              <Flame className='w-12 h-12 text-orange-500'/>
             </div>
             <span className='font-bold mt-5'>Heating</span>
             <div className='flex justify-center'>
@@ -72,50 +71,51 @@ const About = () => {
               and peace of mind when the temperatures drop.
             </div>
           </div>
-          <div className="flex flex-col items-center text-center p-6 bg-blue-200 rounded-lg">
-            <div className="flex items-center justify-center w-20 h-20 bg-blue-100 text-blue-600 rounded-full">
-              <Link href="/cooling">
-                <Snowflake className="w-12 h-12 text-blue-500" />
-              </Link>
-            </div>
-            <span className='font-bold mt-5'>Cooling</span>
-            <div>
+          </Link>
+          <Link href={'/cooling'}>
+            <div className="flex flex-col items-center text-center p-6 bg-blue-200 rounded-lg hover:border-0 hover:bg-blue-100">
+              <div className="flex items-center justify-center w-20 h-20 bg-blue-100 text-blue-600 rounded-full">
+                  <Snowflake className="w-12 h-12 text-blue-500" />
+              </div>
+              <span className='font-bold mt-5'>Cooling</span>
+              <div>
               We keep your home or business refreshingly cool throughout the humid summer months with comprehensive air 
               conditioning repairs, tune-ups, and replacements. Our technicians install modern, high-efficiency cooling systems 
               that maximize your comfort while lowering your utility bills.
-            </div>
+              </div>
           </div>
-          <div className="flex flex-col items-center text-center p-6 bg-yellow-400 rounded-lg">
-            <div className="flex items-center justify-center w-20 h-20 bg-yellow-100 text-yellow-600 rounded-full">
-              <Link href="/electrical">
-                <Plug className='w-12 h-12 text-yellow-800'/>
-              </Link>
+          </Link>
+          <Link href="/electrical">
+            <div className="flex flex-col items-center text-center p-6 bg-yellow-400 rounded-lg hover:border-0 hover:bg-yellow-100">
+              <div className="flex items-center justify-center w-20 h-20 bg-yellow-100 text-yellow-600 rounded-full">
+                  <Plug className='w-12 h-12 text-yellow-800'/>
+              </div>
+              <span className='font-bold mt-5'>Electrical</span>
+              <div>
+                From minor outlet repairs and smart home installations to complete panel upgrades, our team handles your power 
+                needs with a strict focus on safety. We ensure your residential or commercial electrical infrastructure is stable, 
+                secure, and fully up to code.
+              </div>
             </div>
-            <span className='font-bold mt-5'>Electrical</span>
-            <div>
-              From minor outlet repairs and smart home installations to complete panel upgrades, our team handles your power 
-              needs with a strict focus on safety. We ensure your residential or commercial electrical infrastructure is stable, 
-              secure, and fully up to code.
+          </Link>
+          <Link href="/iaq">
+            <div className="flex flex-col items-center text-center p-6 bg-purple-200 rounded-lg hover:border-0 hover:bg-purple-50">
+              <div className="flex items-center justify-center w-20 h-20 bg-purple-100 text-purple-600 rounded-full">
+                  <AirVent className='w-12 h-12 text-purple-500'/>
+              </div>
+              <span className='font-bold mt-5'>Indoor Air Quality</span>
+              <div>
+                We help you breathe easier by installing advanced air filtration systems, UV purifiers, and humidity control units 
+                that eliminate allergens and pollutants. Our indoor air quality solutions ensure a cleaner, healthier, and 
+                fresher environment for your family or business.
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center text-center p-6 bg-purple-200 rounded-lg">
-            <div className="flex items-center justify-center w-20 h-20 bg-purple-100 text-purple-600 rounded-full">
-              <Link href = "/iaq">
-                <AirVent className='w-12 h-12 text-purple-500'/>
-              </Link>
-            </div>
-            <span className='font-bold mt-5'>Indoor Air Quality</span>
-            <div>
-              We help you breathe easier by installing advanced air filtration systems, UV purifiers, and humidity control units 
-              that eliminate allergens and pollutants. Our tailored indoor air quality solutions ensure a cleaner, healthier, and 
-              fresher environment for your family or business.
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
 
-      <div className="border-t border-dotted border-gray-300 my-8 w-full" />
-      <div className='grid grid-cols-3 gap-2 ml-12 mr-12'>
+      <div className="border-t border-dotted border-black my-8 w-full" />
+      <div className='grid grid-cols-3 gap-2 p-12'>
         <div className='flex flex-col'>
           <div className=''>
             <span className='text-xl text-blue-950 font-bold'>About us</span>
