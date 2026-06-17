@@ -17,7 +17,7 @@ const NavBar = () => {
           
           <Link href="/heating" className="flex items-center gap-1 text-gray-300 group">
             <span>Heating</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
           
           <div className={styles.servicesDropdown}>
@@ -33,7 +33,7 @@ const NavBar = () => {
         <li className={styles.servicesMenu}>
           <Link href="/cooling" className="flex items-center gap-1 text-gray-300 group">
             <span>Cooling</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
@@ -49,7 +49,7 @@ const NavBar = () => {
         <li className={styles.servicesMenu}>
           <Link href="/electrical" className="flex items-center gap-1 text-gray-300 group">
             <span>Electrical</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
@@ -65,7 +65,7 @@ const NavBar = () => {
         <li className={styles.servicesMenu}>
           <Link href="/iaq" className="flex items-center gap-1 text-gray-300 group">
             <span>Indoor Air Quality</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>
@@ -83,7 +83,7 @@ const NavBar = () => {
         <li className={styles.servicesMenu}>
           <Link href="/contact/message" className="flex items-center gap-1 text-gray-300 group">
             <span>Contact</span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
+            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
           </Link>
 
           <div className={styles.servicesDropdown}>

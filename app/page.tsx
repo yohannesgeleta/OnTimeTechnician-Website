@@ -18,10 +18,10 @@ export default function Home() {
         </div>
         {/* Right Column: Stacked Text Blocks */}
         <div className="flex flex-col gap-4 bg-green-300">
-          <div className='bg-blue-200'>
+          <div className='bg-blue-200 h-full'>
             This is a text description of what it does.
           </div>
-          <div className='bg-amber-700'>
+          <div className='bg-amber-700 h-1/2'>
             Extra text talking about the company.
           </div>
         </div>
