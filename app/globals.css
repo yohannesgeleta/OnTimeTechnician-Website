@@ -15,7 +15,8 @@
 }
 
 body {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
   color: black;
-  padding: 1rem;
 }
-

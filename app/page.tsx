@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { AirVent, ArrowRight, CalendarCheck, Clock, ShieldCheck, Star, ThermometerSun, Wind, Zap } from 'lucide-react'
-import hvac from './images/hvac.png'
+import electric from './images/wiring2.jpg'
 import house from './images/house.jpg'
-import cooling from './images/cooling.jpg'
+import cooling from './images/outdoor_fan.jpg'
 import wiring from './images/wiring.jpg'
 
 const services = [
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="hidden justify-end lg:flex">
             <div className="rounded-lg border border-white/20 bg-white p-6 shadow-2xl">
               <Image
-                src={hvac}
+                src={electric}
                 alt="HVAC service equipment"
                 placeholder="blur"
                 className="h-auto w-[360px]"

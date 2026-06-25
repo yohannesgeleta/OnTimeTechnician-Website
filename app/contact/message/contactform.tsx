@@ -36,8 +36,8 @@ export default function ContactForm() {
               <Phone className="mt-1 h-5 w-5 shrink-0 text-blue-800" />
               <div>
                 <div className="font-bold text-slate-950">Phone</div>
-                <a href="tel:7170000000" className="text-slate-700 hover:text-blue-800 hover:underline">
-                  717-xxx-xxxx
+                <a href="tel:717-813-4896" className="text-slate-700 hover:text-blue-800 hover:underline">
+                  717-813-4896
                 </a>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import cooling from '../images/cooling.jpg'
+import cooling from '../images/outdoor_fan.jpg'
 import { ArrowRight, CheckCircle2, Drill, Fan, Gauge, Home, Snowflake, TriangleAlert, Wrench } from 'lucide-react'
 
 const indoorParts = [

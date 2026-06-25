@@ -60,7 +60,6 @@ const navItems = [
     icon: Mail,
     links: [
       { label: 'Send us a message', href: '/contact/message' },
-      { label: 'Request an estimate', href: '/contact/estimate' },
       { label: 'Schedule an appointment', href: '/contact/schedule' },
     ],
   },

@@ -36,7 +36,7 @@ export default function Header() {
             <Phone className={styles.phoneIcon} />
             <div>
               <div className={styles.phoneLabel}>Call us today</div>
-              <a href="tel:7170000000" className={styles.phoneNumber}>717-xxx-xxxx</a>
+              <a href="tel:717-813-4896" className={styles.phoneNumber}>717-813-4896</a>
             </div>
           </div>
 

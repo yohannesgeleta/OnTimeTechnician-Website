@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import furnacepic from '../images/furnace.png'
+import furnacepic from '../images/therm.jpg'
 import { ArrowRight, Drill, Flame, Gauge, Home, ThermometerSun, TriangleAlert, Wrench } from 'lucide-react'
 
 const systemParts = [

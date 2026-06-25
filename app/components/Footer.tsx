@@ -85,23 +85,15 @@ const Footer = () => {
             <Phone className={styles.detailIcon} />
             <div>
               <div className={styles.detailLabel}>Phone</div>
-              <div className={styles.detailText}>717-xxx-xxxx</div>
+              <div className={styles.detailText}>717-813-4896</div>
             </div>
           </div>
           <div className={styles.detailItem}>
             <Mail className={styles.detailIcon} />
             <div>
               <div className={styles.detailLabel}>Messages</div>
-              <div className={styles.detailText}>Send a message or request an estimate online.</div>
+              <div className={styles.detailText}>Send a message or schedule a service online.</div>
             </div>
-          </div>
-          <div className={styles.buttonRow}>
-            <Link href="/contact/estimate" className={styles.secondaryButton}>
-              Estimate
-            </Link>
-            <Link href="/contact/schedule" className={styles.primaryButton}>
-              Schedule
-            </Link>
           </div>
         </div>
       </div>
