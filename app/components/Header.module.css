@@ -1,23 +1,143 @@
 .headerWrapper {
   width: 100%;
-  background-color: #b6b5b5ed;
-  padding: 20px 0;
+  background: #e5e7eb;
+  border-bottom: 1px solid #cbd5e1;
 }
 
 .headerContainer {
   display: flex;
-  justify-content: space-between; /* Crucial: Creates the Left, Center, Right spacing */
-  align-items: center;            /* Perfectly aligns items vertically */
-  max-width: 1200px;              /* Stops the content from spreading too wide on big screens */
-  margin: 0 auto;                 /* Centers the entire 1200px box on the page */
-  padding: 0 20px;                /* Prevents items from hitting the screen edge on mobile */
-}
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;         /* Stacks "Here to Help" on top of the phone number */
   align-items: center;
-  font-size: x-large;
-  font-weight: 900;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1240px;
+  min-height: 96px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
 }
 
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoImage {
+  width: 230px;
+  height: auto;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.serviceNote {
+  max-width: 310px;
+  padding-right: 1.5rem;
+  border-right: 1px solid #94a3b8;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.phoneBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #0f172a;
+}
+
+.phoneIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #1e3a8a;
+}
+
+.phoneLabel {
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.phoneNumber {
+  display: block;
+  margin-top: 0.15rem;
+  color: #0f172a;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.phoneNumber:hover {
+  color: #1d4ed8;
+}
+
+.scheduleButton {
+  min-height: 2.85rem;
+  padding: 0 1.35rem;
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #dc2626;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgb(15 23 42 / 0.14);
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.scheduleButton:hover {
+  background: #b91c1c;
+  box-shadow: 0 8px 18px rgb(15 23 42 / 0.18);
+}
+
+.scheduleButton:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: 0.85rem;
+    min-height: auto;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .serviceNote {
+    max-width: none;
+    width: 100%;
+    padding-right: 0;
+    border-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoImage {
+    width: 205px;
+  }
+
+  .phoneBlock {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .scheduleButton {
+    width: 100%;
+    max-width: 260px;
+  }
+}

@@ -1,110 +1,120 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import logopic from './images/ott-logo.png'
 import styles from './NavBar.module.css'
-import { ChevronDown } from 'lucide-react';
+
+import {  ChevronDown,
+  Home,
+  Info,
+  Mail,
+  Snowflake,
+  ThermometerSun,
+  Wind,
+  Zap,
+} from 'lucide-react'
+
+const navItems = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: Home,
+  },
+  {
+    label: 'Heating',
+    href: '/heating',
+    icon: ThermometerSun,
+    links: [
+      { label: 'Heating Install', href: '/heating/install' },
+      { label: 'Heating Repair', href: '/heating/repair' },
+    ],
+  },
+  {
+    label: 'Cooling',
+    href: '/cooling',
+    icon: Snowflake,
+    links: [
+      { label: 'Cooling Install', href: '/cooling/install' },
+      { label: 'Cooling Repair', href: '/cooling/repair' },
+    ],
+  },
+  {
+    label: 'Electrical',
+    href: '/electrical',
+    icon: Zap,
+    links: [
+      { label: 'Wiring', href: '/electrical/wiring' },
+      { label: 'Repair', href: '/electrical/repair' },
+    ],
+  },
+  {
+    label: 'Indoor Air Quality',
+    href: '/iaq',
+    icon: Wind,
+    links: [
+      { label: 'Filtering', href: '/iaq/filtering' },
+      { label: 'Repair', href: '/iaq/repair' },
+    ],
+  },
+  {
+    label: 'Contact',
+    href: '/contact/message',
+    icon: Mail,
+    links: [
+      { label: 'Send us a message', href: '/contact/message' },
+      { label: 'Request an estimate', href: '/contact/estimate' },
+      { label: 'Schedule an appointment', href: '/contact/schedule' },
+    ],
+  },
+  {
+    label: 'About',
+    href: '/about',
+    icon: Info,
+  },
+]
 
 const NavBar = () => {
   return (
-    <nav className="flex min-h-14 items-center justify-center px-5 bg-blue-950">
-      <ul className="flex space-x-20">
-        <li>
-          <Link href="/" className="text-gray-300">Home</Link>
-        </li>
+    <nav className="border-t border-blue-900 bg-blue-950 shadow-md">
+      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-center px-6">
+        <ul className="flex flex-wrap items-center gap-2">
+          {navItems.map((item) => {
+            const Icon = item.icon
+            const hasDropdown = item.links && item.links.length > 0
 
-        <li className={styles.servicesMenu}>
-          
-          <Link href="/heating" className="flex items-center gap-1 text-gray-300 group">
-            <span>Heating</span>
-            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-          
-          <div className={styles.servicesDropdown}>
-            <Link href="/heating/install" className={styles.servicesDropdownLink}>
-              Heating Install
-            </Link>
-            <Link href="/heating/repair" className={styles.servicesDropdownLink}>
-              Heating Repair
-            </Link>
-          </div>
-        </li>
+            return (
+              <li key={item.label} className={styles.servicesMenu}>
+                <Link
+                  href={item.href}
+                  className="flex h-14 items-center gap-2 px-5 text-base font-semibold text-slate-200 transition hover:bg-blue-900 hover:text-white"
+                >
+                  <Icon className="h-4 w-4 text-blue-200" />
+                  <span>{item.label}</span>
+                  {hasDropdown && (
+                    <ChevronDown className="h-4 w-4 text-blue-200 transition-transform duration-200 group-hover:rotate-180" />
+                  )}
+                </Link>
 
-        <li className={styles.servicesMenu}>
-          <Link href="/cooling" className="flex items-center gap-1 text-gray-300 group">
-            <span>Cooling</span>
-            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-
-          <div className={styles.servicesDropdown}>
-            <Link href="/cooling/install" className={styles.servicesDropdownLink}>
-              Cooling Install
-            </Link>
-            <Link href="/cooling/repair" className={styles.servicesDropdownLink}>
-              Cooling Repair
-            </Link>
-          </div>
-        </li>
-
-        <li className={styles.servicesMenu}>
-          <Link href="/electrical" className="flex items-center gap-1 text-gray-300 group">
-            <span>Electrical</span>
-            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-
-          <div className={styles.servicesDropdown}>
-            <Link href="/electrical/wiring" className={styles.servicesDropdownLink}>
-              Wiring
-            </Link>
-            <Link href="/electrical/repair" className={styles.servicesDropdownLink}>
-              Repair
-            </Link>
-          </div>
-        </li>
-
-        <li className={styles.servicesMenu}>
-          <Link href="/iaq" className="flex items-center gap-1 text-gray-300 group">
-            <span>Indoor Air Quality</span>
-            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-
-          <div className={styles.servicesDropdown}>
-            <Link href="/iaq/filtering" className={styles.servicesDropdownLink}>
-              Filtering
-            </Link>
-            <Link href="/iaq/repair" className={styles.servicesDropdownLink}>
-              Repair
-            </Link>
-          </div>
-        </li>
-
-        
-
-        <li className={styles.servicesMenu}>
-          <Link href="/contact/message" className="flex items-center gap-1 text-gray-300 group">
-            <span>Contact</span>
-            <ChevronDown className="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" />
-          </Link>
-
-          <div className={styles.servicesDropdown}>
-            <Link href="/contact/message" className={styles.servicesDropdownLink}>
-              Send us a message
-            </Link>
-            <Link href="/contact/estimate" className={styles.servicesDropdownLink}>
-              Request an estimate
-            </Link>
-            <Link href="/contact/schedule" className={styles.servicesDropdownLink}>
-              Schedule an appoitment
-            </Link>
-          </div>
-        </li>
-
-        <li>
-          <Link href="/about" className="text-gray-300">About</Link>
-        </li>
-      </ul>
+                {hasDropdown && (
+                  <div className={styles.servicesDropdown}>
+                    {item.links?.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={styles.servicesDropdownLink}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </nav>
   )
 }
 
 export default NavBar
+
+

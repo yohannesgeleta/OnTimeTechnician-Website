@@ -5,6 +5,7 @@ import Image from 'next/image'
 import logopic from '../images/ott-logo.png'
 import styles from './Header.module.css'
 import {useRouter} from 'next/navigation';
+import { Phone } from 'lucide-react'
 
 export default function Header() {
   const router = useRouter();
@@ -13,31 +14,40 @@ export default function Header() {
   };
 
     return (
-      <nav className={styles.headerWrapper}>
-      <nav className={styles.headerContainer}>
-        <nav>
-          <Link href = "/">
+      <header className={styles.headerWrapper}>
+      <div className={styles.headerContainer}>
+        <Link href="/" className={styles.logoLink} aria-label="OnTimeTechnician home">
             <Image 
             src = {logopic} 
             alt = "OTT logo" 
             placeholder="blur"
-            width={300}
-            height={150}
+            width={240}
+            height={120}
+            className={styles.logoImage}
             />
-          </Link>
-        </nav>
-        <nav className={styles.contactInfo}>
-          Contact us @717xxxxxx
-        </nav>
-        <nav>
-          <button className ="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition" 
+        </Link>
+
+        <div className={styles.headerActions}>
+          <div className={styles.serviceNote}>
+            Family-owned HVAC, electrical, and indoor air quality service
+          </div>
+
+          <div className={styles.phoneBlock}>
+            <Phone className={styles.phoneIcon} />
+            <div>
+              <div className={styles.phoneLabel}>Call us today</div>
+              <a href="tel:7170000000" className={styles.phoneNumber}>717-xxx-xxxx</a>
+            </div>
+          </div>
+
+          <button className={styles.scheduleButton}
           type="button"
           onClick={handleClick}
           >
             Schedule
           </button>
-        </nav>
-      </nav>
-      </nav>
+        </div>
+      </div>
+      </header>
     )
 };
