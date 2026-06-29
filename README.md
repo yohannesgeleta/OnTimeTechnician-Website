@@ -2,7 +2,7 @@
 
 A responsive customer-service and scheduling platform for a family-owned HVAC, electrical, and indoor air quality business serving Central Pennsylvania.
 
-**Live Demo:** [Add deployed application URL](https://www.ontimetechnician.com)
+**Live Demo:** [www.ontimetechnician.com](https://www.ontimetechnician.com)
 
 **Source Code:** [github.com/yohannesgeleta/OnTimeTechnician-Website](https://github.com/yohannesgeleta/OnTimeTechnician-Website)
 
