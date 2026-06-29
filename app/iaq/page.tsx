@@ -76,10 +76,10 @@ export default function IndoorAirQualityPage() {
         </nav>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-wide text-red-600">Indoor air quality service</p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">
+          <h1 className="mt-3 max-w-4xl text-3xl font-bold leading-tight text-slate-950 sm:text-5xl">
             Cleaner indoor air starts with controlling particles, moisture, odors, and airflow.
           </h1>
           <div className="mt-5 max-w-4xl space-y-4 leading-8 text-slate-700">
@@ -97,7 +97,7 @@ export default function IndoorAirQualityPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-14">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div>
             <div className="mb-7">
@@ -154,7 +154,7 @@ export default function IndoorAirQualityPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">When to call</p>
@@ -178,7 +178,7 @@ export default function IndoorAirQualityPage() {
         </div>
       </section>
 
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-red-300">Indoor air quality help</p>

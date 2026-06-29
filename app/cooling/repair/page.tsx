@@ -33,10 +33,10 @@ export default function CoolingRepairPage() {
         </nav>
       </section>
 
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-wide text-red-300">Cooling repair</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Get your cooling system back to steady, dependable comfort.
           </h1>
           <p className="mt-5 max-w-3xl leading-8 text-slate-200">
@@ -47,7 +47,7 @@ export default function CoolingRepairPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">When to schedule repair</p>
@@ -72,7 +72,7 @@ export default function CoolingRepairPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-14">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">Our repair approach</p>
@@ -90,8 +90,8 @@ export default function CoolingRepairPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
-        <div className="mx-auto grid max-w-6xl gap-6 rounded-lg border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-[auto_1fr]">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
+        <div className="mx-auto grid max-w-6xl gap-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:grid-cols-[auto_1fr]">
           <div className="flex h-16 w-16 items-center justify-center rounded-md bg-blue-950 text-white">
             <ShieldAlert className="h-8 w-8" />
           </div>

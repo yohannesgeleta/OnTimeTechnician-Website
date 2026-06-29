@@ -1,14 +1,19 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './NavBar.module.css'
 
-import {  ChevronDown,
+import { ChevronDown,
   Home,
   Info,
   Mail,
+  Menu,
   Snowflake,
   ThermometerSun,
   Wind,
+  X,
   Zap,
 } from 'lucide-react'
 
@@ -71,33 +76,70 @@ const navItems = [
 ]
 
 const NavBar = () => {
+  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
+  const [openSection, setOpenSection] = useState<string | null>(null)
+
+  const closeMenu = () => {
+    setIsOpen(false)
+    setOpenSection(null)
+  }
+
   return (
-    <nav className="border-t border-blue-900 bg-blue-950 shadow-md">
-      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-center px-6">
-        <ul className="flex flex-wrap items-center gap-2">
+    <nav className="relative border-t border-blue-900 bg-blue-950 shadow-md">
+      <div className={styles.navContainer}>
+        <button
+          type="button"
+          className={styles.menuButton}
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsOpen((current) => !current)}
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <span>Menu</span>
+        </button>
+
+        <ul id="primary-navigation" className={`${styles.navList} ${isOpen ? styles.navListOpen : ''}`}>
           {navItems.map((item) => {
             const Icon = item.icon
             const hasDropdown = item.links && item.links.length > 0
+            const hasWideDropdown = item.label === 'Heating' || item.label === 'Cooling'
 
             return (
-              <li key={item.label} className={styles.servicesMenu}>
-                <Link
-                  href={item.href}
-                  className="flex h-14 items-center gap-2 px-5 text-base font-semibold text-slate-200 transition hover:bg-blue-900 hover:text-white"
-                >
-                  <Icon className="h-4 w-4 text-blue-200" />
-                  <span>{item.label}</span>
+              <li key={item.label} className={`${styles.servicesMenu} group`}>
+                <div className={styles.navItemRow}>
+                  <Link
+                    href={item.href}
+                    onClick={closeMenu}
+                    aria-current={pathname === item.href ? 'page' : undefined}
+                    className={`${styles.navLink} ${hasWideDropdown ? styles.wideNavLink : ''}`}
+                  >
+                    <Icon className="h-5 w-5 text-blue-200" />
+                    <span>{item.label}</span>
+                    {hasDropdown && <ChevronDown className={styles.desktopChevron} />}
+                  </Link>
                   {hasDropdown && (
-                    <ChevronDown className="h-4 w-4 text-blue-200 transition-transform duration-200 group-hover:rotate-180" />
+                    <button
+                      type="button"
+                      className={styles.submenuButton}
+                      aria-label={`Show ${item.label} links`}
+                      aria-expanded={openSection === item.label}
+                      onClick={() => setOpenSection((current) => current === item.label ? null : item.label)}
+                    >
+                      <ChevronDown className={openSection === item.label ? styles.chevronOpen : ''} />
+                    </button>
                   )}
-                </Link>
+                </div>
 
                 {hasDropdown && (
-                  <div className={styles.servicesDropdown}>
+                  <div
+                    className={`${styles.servicesDropdown} ${openSection === item.label ? styles.servicesDropdownOpen : ''} ${item.label === 'Contact' ? styles.contactDropdown : ''}`}
+                  >
                     {item.links?.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
+                        onClick={closeMenu}
                         className={styles.servicesDropdownLink}
                       >
                         {link.label}
@@ -115,5 +157,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-

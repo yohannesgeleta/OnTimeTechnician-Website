@@ -71,9 +71,9 @@ export default function CoolingPage() {
         </nav>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm">
+          <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
             <div className="relative min-h-[320px] overflow-hidden rounded-md">
               <Image src={cooling} alt="Air conditioning cooling system" fill placeholder="blur" className="object-cover" />
             </div>
@@ -87,7 +87,7 @@ export default function CoolingPage() {
 
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">Cooling service</p>
-            <h1 className="mt-3 text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">
+            <h1 className="mt-3 text-3xl font-bold leading-tight text-slate-950 sm:text-5xl">
               Understanding how your home cooling system works.
             </h1>
             <p className="mt-5 leading-8 text-slate-700">
@@ -108,7 +108,7 @@ export default function CoolingPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-14">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">The core components</p>
@@ -175,7 +175,7 @@ export default function CoolingPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">When to call</p>
@@ -200,7 +200,7 @@ export default function CoolingPage() {
         </div>
       </section>
 
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-red-300">Cooling help</p>

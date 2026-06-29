@@ -67,14 +67,14 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative mx-auto grid min-h-[620px] max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="relative mx-auto grid min-h-[480px] max-w-7xl items-center gap-10 px-4 py-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="max-w-3xl text-white">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold">
               <Star className="h-4 w-4 text-red-400" />
               Serving Central Pennsylvania homes and businesses
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Reliable HVAC and electrical service when your home needs it.
             </h1>
 
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[0.72fr_1.28fr]">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 sm:py-16 lg:grid-cols-[0.72fr_1.28fr]">
         <div>
           <p className="text-sm font-bold uppercase tracking-wide text-red-600">Complete home service</p>
           <h2 className="mt-3 text-3xl font-bold text-slate-950 sm:text-4xl">
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:grid-cols-[0.85fr_1.15fr]">
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-16 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="relative min-h-[320px] overflow-hidden rounded-lg">
           <Image
             src={wiring}
@@ -242,4 +242,3 @@ export default function Home() {
     </main>
   )
 }
-

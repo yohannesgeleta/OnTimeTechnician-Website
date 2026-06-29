@@ -3,10 +3,10 @@ import CalendarGrid from './calender'
 export default function SchedulePage() {
   return (
     <main className="bg-slate-50 text-slate-950">
-      <section className="border-b border-slate-200 bg-blue-950 px-6 py-14 text-white">
+      <section className="border-b border-slate-200 bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl text-center">
           <p className="text-sm font-bold uppercase tracking-wide text-red-300">Schedule service</p>
-          <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="mx-auto mt-3 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Choose an appointment date.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-200">
@@ -16,7 +16,7 @@ export default function SchedulePage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-5xl rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <div className="mb-7 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">Pick your date</p>

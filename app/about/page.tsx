@@ -40,11 +40,11 @@ const values = [
 export default function About() {
   return (
     <main className="bg-slate-50 text-slate-950">
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-300">About OnTimeTechnician</p>
-            <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mt-3 text-3xl font-bold leading-tight sm:text-5xl">
               Local service with the kind of care you can feel at home.
             </h1>
             <p className="mt-5 max-w-2xl leading-8 text-slate-200">
@@ -81,7 +81,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-4 py-10 sm:px-6 sm:py-16">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">Family-owned and local</p>
@@ -105,7 +105,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -139,7 +139,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-4 py-10 sm:px-6 sm:py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div className="rounded-lg bg-blue-950 p-8 text-white">
             <div className="flex items-center gap-3">
@@ -156,7 +156,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm">
+          <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-slate-950">Company details</h2>
             <div className="mt-6 space-y-5">
               <div className="flex gap-4">
@@ -184,7 +184,7 @@ export default function About() {
                 <WalletCards className="mt-1 h-5 w-5 shrink-0 text-blue-800" />
                 <div>
                   <div className="font-bold text-slate-950">Payment options</div>
-                  <div className="text-slate-700">Mastercard, cash, and check</div>
+                  <div className="text-slate-700">Mastercard, Visa, cash, and check</div>
                 </div>
               </div>
             </div>

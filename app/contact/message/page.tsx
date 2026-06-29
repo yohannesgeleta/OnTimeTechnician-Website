@@ -3,10 +3,10 @@ import ContactForm from './contactform'
 export default function ContactMessagePage() {
   return (
     <main className="bg-slate-50">
-      <section className="border-b border-slate-200 bg-blue-950 px-6 py-14 text-white">
+      <section className="border-b border-slate-200 bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-wide text-red-300">Contact OnTimeTechnician</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Tell us what is going on. We will help you find the right next step.
           </h1>
           <p className="mt-5 max-w-2xl leading-8 text-slate-200">

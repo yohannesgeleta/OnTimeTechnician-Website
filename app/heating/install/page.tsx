@@ -31,10 +31,10 @@ export default function HeatingInstallPage() {
         </nav>
       </section>
 
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-wide text-red-300">Heating installation</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             A better heating system starts with the right installation.
           </h1>
           <p className="mt-5 max-w-3xl leading-8 text-slate-200">
@@ -44,7 +44,7 @@ export default function HeatingInstallPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">When installation makes sense</p>
@@ -69,7 +69,7 @@ export default function HeatingInstallPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-14">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">What matters</p>
@@ -87,7 +87,7 @@ export default function HeatingInstallPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 rounded-lg bg-blue-950 p-8 text-white md:flex-row md:items-center md:justify-between">
           <div>
             <div className="flex items-center gap-3">

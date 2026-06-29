@@ -32,13 +32,13 @@ export default function Header() {
             Family-owned HVAC, electrical, and indoor air quality service
           </div>
 
-          <div className={styles.phoneBlock}>
+          <a href="tel:717-813-4896" className={styles.phoneBlock} aria-label="Call 717-813-4896">
             <Phone className={styles.phoneIcon} />
-            <div>
+            <div className={styles.phoneText}>
               <div className={styles.phoneLabel}>Call us today</div>
-              <a href="tel:717-813-4896" className={styles.phoneNumber}>717-813-4896</a>
+              <span className={styles.phoneNumber}>717-813-4896</span>
             </div>
-          </div>
+          </a>
 
           <button className={styles.scheduleButton}
           type="button"

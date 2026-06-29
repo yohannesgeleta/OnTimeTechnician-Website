@@ -1,15 +1,94 @@
+.navContainer {
+  display: flex;
+  min-height: 3.5rem;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.navList {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menuButton,
+.submenuButton {
+  border: 0;
+  color: #f8fafc;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menuButton {
+  display: none;
+}
+
 .servicesMenu {
   position: relative;
 }
 
+.navItemRow {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0 0.5rem;
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.wideNavLink {
+  padding: 0 1.25rem;
+}
+
+.navLink:hover,
+.navLink:focus-visible,
+.navLink[aria-current="page"] {
+  color: #ffffff;
+  background: #1e3a8a;
+}
+
+.submenuButton {
+  display: none;
+}
+
+.desktopChevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #bfdbfe;
+  transition: transform 160ms ease;
+}
+
+.servicesMenu:hover .desktopChevron,
+.servicesMenu:focus-within .desktopChevron {
+  transform: rotate(180deg);
+}
+
 .servicesDropdown {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 100%;
   z-index: 80;
   display: flex;
-  min-width: 14rem;
-  transform: translateX(-50%) translateY(0.65rem);
+  width: 100%;
+  box-sizing: border-box;
+  transform: translateY(0.65rem);
   flex-direction: column;
   gap: 0.25rem;
   padding: 0.55rem;
@@ -27,11 +106,12 @@
 .servicesMenu:focus-within .servicesDropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .servicesDropdownLink {
   display: block;
+  white-space: nowrap;
   border-radius: 0.4rem;
   padding: 0.72rem 0.85rem;
   color: #334155;
@@ -48,4 +128,126 @@
   background: #eff6ff;
   color: #172554;
   outline: none;
+}
+
+.contactDropdown {
+  width: max-content;
+  min-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .navContainer {
+    min-height: 3rem;
+    justify-content: flex-end;
+    padding: 0 1rem;
+  }
+
+  .menuButton {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .navList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    border-top: 1px solid #1e3a8a;
+    background: #172554;
+    box-shadow: 0 16px 30px rgb(15 23 42 / 0.24);
+  }
+
+  .navListOpen {
+    display: flex;
+  }
+
+  .servicesMenu {
+    width: 100%;
+  }
+
+  .navItemRow {
+    width: 100%;
+  }
+
+  .navLink,
+  .wideNavLink {
+    min-height: 3rem;
+    height: auto;
+    flex: 1;
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  .submenuButton {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktopChevron {
+    display: none;
+  }
+
+  .submenuButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 160ms ease;
+  }
+
+  .chevronOpen {
+    transform: rotate(180deg);
+  }
+
+  .servicesDropdown {
+    position: static;
+    display: none;
+    width: 100%;
+    transform: none;
+    padding: 0 0 0.5rem 2.75rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .servicesMenu:hover .servicesDropdown,
+  .servicesMenu:focus-within .servicesDropdown {
+    display: none;
+    transform: none;
+  }
+
+  .servicesMenu .servicesDropdownOpen,
+  .servicesMenu:hover .servicesDropdownOpen,
+  .servicesMenu:focus-within .servicesDropdownOpen {
+    display: flex;
+  }
+
+  .servicesDropdownLink {
+    color: #dbeafe;
+  }
+
+  .servicesDropdownLink:hover,
+  .servicesDropdownLink:focus-visible {
+    color: #ffffff;
+    background: #1e3a8a;
+  }
+
+  .contactDropdown {
+    width: 100%;
+  }
 }

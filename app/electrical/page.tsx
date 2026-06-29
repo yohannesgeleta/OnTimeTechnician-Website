@@ -67,10 +67,10 @@ export default function ElectricalPage() {
         </nav>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-wide text-red-600">Electrical service</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-slate-950 sm:text-5xl">
             Understanding how your home electrical system works.
           </h1>
           <div className="mt-5 max-w-4xl space-y-4 leading-8 text-slate-700">
@@ -92,7 +92,7 @@ export default function ElectricalPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-14">
+      <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">Electricity cycle</p>
@@ -134,7 +134,7 @@ export default function ElectricalPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14">
+      <section className="px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">When to call</p>
@@ -158,7 +158,7 @@ export default function ElectricalPage() {
         </div>
       </section>
 
-      <section className="bg-blue-950 px-6 py-14 text-white">
+      <section className="bg-blue-950 px-4 py-10 sm:px-6 sm:py-14 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-red-300">Electrical help</p>

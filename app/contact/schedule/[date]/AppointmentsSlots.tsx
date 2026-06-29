@@ -59,11 +59,11 @@ const AppointmentSlots = ({ date, availableSlots }: AppointmentSlotsProps) => {
   }, [state.success, router]);
 
   return (
-    <main className="bg-slate-50 px-6 py-14 text-slate-950">
+    <main className="bg-slate-50 px-4 py-10 sm:px-6 sm:py-14 text-slate-950">
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 text-center">
           <p className="text-sm font-bold uppercase tracking-wide text-red-600">Appointment times</p>
-          <h1 className="mt-2 text-4xl font-bold text-slate-950">Choose a service time</h1>
+          <h1 className="mt-2 text-3xl font-bold text-slate-950">Choose a service time</h1>
           <p className="mt-3 text-slate-600">Available appointments for {formattedDate}</p>
         </div>
 
